@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+
+  <Import Project="..\..\common.abp.props" />
+
+  <PropertyGroup><LangVersion>latest</LangVersion>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>Volo.Abp.Account.HttpApi</AssemblyName>
+    <PackageId>Volo.Abp.Account.HttpApi</PackageId>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Volo.Abp.Account.Application.Contracts\Volo.Abp.Account.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Volo.Abp.Identity.HttpApi\Volo.Abp.Identity.HttpApi.csproj" />
+    
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="4.4.3" />
+  </ItemGroup>
+
+</Project>

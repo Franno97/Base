@@ -1,0 +1,16 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Version>0.2.1</Version>
+	<Copyright>Ecuador. Ministerio de Relaciones Exteriores y Movilidad Humana</Copyright>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+	<AbpProjectType>app</AbpProjectType>
+  </PropertyGroup>
+
+  <Target Name="NoWarnOnRazorViewImportedTypeConflicts" BeforeTargets="RazorCoreCompile">
+    <PropertyGroup>
+      <NoWarn>$(NoWarn);0436</NoWarn>
+    </PropertyGroup>
+  </Target>
+
+</Project>

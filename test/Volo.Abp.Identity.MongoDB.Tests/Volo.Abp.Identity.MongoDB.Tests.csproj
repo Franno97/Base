@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup><LangVersion>latest</LangVersion>
+    <TargetFramework>net5.0</TargetFramework>
+    <AssemblyName>Volo.Abp.Identity.MongoDB.Tests</AssemblyName>
+    <PackageId>Volo.Abp.Identity.MongoDB.Tests</PackageId>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Identity.MongoDB" Version="4.4.3" />
+    <PackageReference Include="Volo.Abp.Identity.TestBase" Version="4.4.3" />
+
+    <PackageReference Include="Volo.Abp.PermissionManagement.MongoDB" Version="4.4.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkPackageVersion)" />
+    <PackageReference Include="Mongo2Go" Version="$(Mongo2GoPackageVersion)" />
+  </ItemGroup>
+
+</Project>

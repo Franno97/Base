@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp" Version="4.4.3" />
+    <PackageReference Include="Volo.Abp.Authorization.Abstractions" Version="4.4.3" />
+    <PackageReference Include="Volo.Abp.Ddd.Application.Contracts" Version="4.4.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mre.Sb.AuditoriaConf.Domain.Shared\Mre.Sb.AuditoriaConf.Domain.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

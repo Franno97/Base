@@ -1,0 +1,130 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Volo.Abp.Account.Localization
+@using Volo.Abp.Account.Settings
+@using Volo.Abp.Settings
+@using Mre.Sb.Base.Cuenta
+@model PersonalizacionLoginModel
+@inject IHtmlLocalizer<AccountResource> L
+@using Mre.Sb.Base.Localization
+@inject IHtmlLocalizer<BaseResource> LBase
+
+@inject Volo.Abp.Settings.ISettingProvider SettingProvider
+
+ 
+
+<script>
+
+   
+    document.addEventListener("DOMContentLoaded", function (event) {
+         
+        $('form').submit(function () {
+            if ($(this).valid()) {
+                var texto = $('.btn-block.btn-primary').text();
+                $('.btn-block.btn-primary').html('<span class="spinner-border spinner-border" role="status" aria-hidden="true"></span>').attr('disabled', true);
+                $(':submit', this).attr('disabled', 'disabled');
+            }
+        });
+    });
+     
+</script>
+
+<div class="card mt-3 shadow-sm rounded">
+    <div class="card-body p-5">
+
+        <h4>@L["Login"]</h4>
+
+        @if (Model.Fase == Mre.Sb.Base.Cuenta.FaseAcceso.VerificarUsuario)
+        {
+    <form asp-page-handler="VerificarUsuario" method="post" class="mt-4">
+
+        <input asp-for="ReturnUrl" />
+        <input asp-for="ReturnUrlHash" />
+
+        <div class="form-group">
+            <label asp-for="Usuario"></label> 
+            <div class="input-group">
+                <input asp-for="Usuario" class="form-control" />
+
+                <div class="input-group-append">
+                    <span class="input-group-text">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+            <span asp-validation-for="Usuario" class="text-danger"></span>
+        </div>
+
+
+
+        <abp-button type="submit" button-type="Primary" name="Action" value="Login" class="btn-block btn-lg mt-3"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> @LBase["Acceso:VerificarUsuario"]</abp-button>
+
+    </form>
+
+        }
+        else
+        {
+            @if (await SettingProvider.IsTrueAsync(AccountSettingNames.IsSelfRegistrationEnabled))
+            {
+                <strong>
+                    @L["AreYouANewUser"]
+                    <a href="@Url.Page(" . /Register", new {returnUrl=Model.ReturnUrl, returnUrlHash=Model.ReturnUrlHash})" class="text-decoration-none">@L["Register"]</a>
+                </strong>
+            }
+            @if (Model.EnableLocalLogin)
+            {
+    <form method="post" class="mt-4">
+        <input asp-for="Usuario" type="hidden" />
+
+        <div class="form-group">
+            <label asp-for="LoginInput.UserNameOrEmailAddress"></label>
+            <div class="input-group">
+                <input asp-for="LoginInput.UserNameOrEmailAddress" class="form-control" readonly />
+
+                <div class="input-group-append">
+                    <span class="input-group-text">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+            <span asp-validation-for="LoginInput.UserNameOrEmailAddress" class="text-danger"></span>
+        </div>
+
+         
+
+        <div class="form-group">
+            <label asp-for="LoginInput.Password"></label> 
+            <div class="input-group">
+                <input asp-for="LoginInput.Password" class="form-control" autofocus="autofocus" /> 
+                <div class="input-group-append">
+                    <span class="input-group-text">
+                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+
+            <span asp-validation-for="LoginInput.Password" class="text-danger"></span>
+        </div>
+        <abp-row>
+            <abp-column>
+                <abp-input asp-for="LoginInput.RememberMe" class="mb-4" />
+            </abp-column>
+            <abp-column class="text-right">
+                <a href="@Url.Page("./ForgotPassword", new {returnUrl = Model.ReturnUrl, returnUrlHash = Model.ReturnUrlHash})">@L["ForgotPassword"]</a>
+            </abp-column>
+        </abp-row>
+        <abp-button type="submit" button-type="Primary" name="Action" value="Login" class="btn-block btn-lg mt-3"><i class="fa fa-sign-in"></i> @L["Login"]</abp-button>
+        @if (Model.ShowCancelButton)
+        {
+            <abp-button type="submit" button-type="Secondary" formnovalidate="formnovalidate" name="Action" value="Cancel" class="btn-block btn-lg mt-3">@L["Cancel"]</abp-button>
+        }
+    </form>
+            }
+             
+        }
+
+
+
+    </div>
+</div>
+

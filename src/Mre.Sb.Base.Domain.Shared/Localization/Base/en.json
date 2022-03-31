@@ -1,0 +1,131 @@
+{
+  "culture": "en",
+  "texts": {
+    //Global
+    "SelectValue": "Select",
+    "New": "New",
+    "AreYouSureToDelete": "Are You Sure To Delete?",
+    "AdvertenciaTitulo": "Warning",
+    "GuardarOk": "Se guardó correctamente",
+    "EliminarOk": "Se elimino correctamente",
+    "Add": "Agregar",
+    "DeleteSelected": "Eliminar seleccionados",
+    "ConfirmarDesactivacion": "Confirmar la desactivación del registro",
+    //Errores
+    "Errores:IntegridadReferencial": "El Registro esta referenciado en otro proceso, no se puede ejecutar la acción",
+
+    //AccountResource
+    "AccessDenied": "Access denied!",
+    "AccessDeniedMessage": "You do not have access to this resource.",
+    "BackToLogin": "Back to login",
+    //Validation
+    "RulesValidationMessage:Required": "Required field",
+    "RulesValidationMessage:Maximum": "Maximum size: {0}",
+    "RulesValidationMessage:Minimum": "Minimum size: {0}",
+    "RulesValidationMessage:Max": "Valor máximo: {0}",
+    "RulesValidationMessage:Min": "Valor mínimo: {0}",
+    "RulesValidationMessage:OnlyNumberAndLetter": "Solo puede contener caracteres alfanuméricos",
+    "RulesValidationMessage:AlfanumericosGuionesPuntoEspacio": "Solo puede contener caracteres alfanuméricos, tildes, guiones bajos (_), guiones (-), espacio y puntos",
+    "RulesValidationMessage:FechaInvalida": "Fecha invalida",
+    "User:UserType:Internal": "Internal",
+    "User:UserType:External": "External",
+    "User:UserType": "Type",
+    "User:SelectUserType": "Select User Type",
+    //Permisos
+    "Permission:Create": "Creación",
+    "Permission:Edit": "Edición",
+    "Permission:Delete": "Eliminación",
+    "Permission:AdministrativeUnit": "Unidades Administrativas",
+    //Menus
+    "Menu:Home": "Home",
+    "Menu:AdministrativeUnit": "Administrative Unit",
+    "Menu:AdministrativeUnitType": "Administrative Unit Type",
+    "Menu:ServiceType": "Service Type",
+    "Menu:PaymentType": "Payment Type",
+    "Menu:Bank": "Bank",
+    "Menu:Level": "Level",
+    "Menu:Currency": "Currency",
+    "Menu:TariffType": "Tariff Type",
+    "Menu:AdministrativeUnitEntity": "Administrative Unit",
+    "Menu:Service": "Service",
+    "Menu:Book": "Book",
+    "Menu:Position": "Position",
+    "Menu:Tariff": "Aranceles",
+    "Menu:TariffHierarchy": "Tariff Hierarchy",
+    "Menu:TariffHeading": "Tariff Heading",
+    "Menu:Agreement": "Agreement",
+    "Menu:Cita": "Appointment",
+    "Menu:UnidadAdministrativaCalendario": "Administrative units calendar",
+    "Menu:Feriados": "Holidays",
+    "Menu:RegistroPersona": "People Registration",
+    "Menu:ConfiguracionRegistroPersona": "Setting",
+    "Menu:Servicios": "Services",
+    "Menu:AuditoriaConfig": "Audit",
+    "Menu:AuditoriaConfigConfig": "Audit Configuration",
+    "Menu:AuditoriaConfigAuditable": "Auditable Item",
+    "Menu:MiFirmaElectronica": "Firma Electrónica",
+    "Menu:TipoExoneracion": "Tipo de exoneración",
+    "Menu:TipoCuentaBancaria": "Tipo de cuenta Bancaria",
+
+    //Menus public
+    "Menu:Inicio": "Home",
+    "Menu:Contactenos": "Contact Us",
+    "Menu:PreguntasFrecuentes": "Frequent questions",
+    "Menu:RegistroUsuario": "User register",
+    //Identidad Configuracion
+    "Permission:IdentidadConfiguracion": "Configuración de identidad",
+    "IdentidadConfiguracion": "Configuración de identidad",
+    "IdentidadConfiguracion:GuardarOk": "La configuración se guardó correctamente",
+    "IdentidadConfiguracion:ClaveLongitud": "Longitud mínima de contraseña",
+    "IdentidadConfiguracion:ClaveRequiereDigito": "La Contraseña requiere números",
+    "IdentidadConfiguracion:ClaveRequiereMayusculas": "La Contraseña requiere mayúsculas",
+    "IdentidadConfiguracion:ClaveRequiereMinusculas": "La Contraseña requiere minúsculas",
+    "IdentidadConfiguracion:ClaveRequiereNoAlfanumericos": "La Contraseña requiere caracteres especiales",
+    "IdentidadConfiguracion:BloqueoMaximoAccesoFallidos": "Intentos fallidos en el acceso, para bloqueo",
+    "IdentidadConfiguracion:BloqueoNuevosUsuarios": "Se puede bloquear a un nuevo usuario",
+    "IdentidadConfiguracion:BloqueoTiempo": "Tiempo bloqueo (Segundos) por intentos fallidos",
+    //IdentidadUsuario
+    "IdentidadUsuario:NotificacionCreacion": "Notificación creación usuario",
+    "Identidad:ControlarClavesAnterior:NoPermitidoCambio": "La contraseña, no pueder ser igual a las {0} contraseñas registradas anteriormente",
+    "Identidad:ControlarClavesAnterior": "Controlar contraseñas anteriores",
+    "Identidad:ControlarClavesAnterior:Descripcion": "La aplicación únicamente permitirá el uso de contraseñas anteriores una cantidad configurable de veces",
+    "Identidad:ControlarClavesAnteriorCantidad": "Cantidad de contraseñas anteriores",
+    "Identidad:ControlarClavesAnteriorCantidad:Descripcion": "Cantidad de contraseñas anteriores",
+    //Usuario
+    "User:Names": "Names",
+    "User:IsActive": "IsActive",
+    "User:UserName": "UserName",
+    "User:Name": "Name",
+    "User:Surname": "Surname",
+    "User:Email": "Email",
+    "User:Code": "Code",
+    "User:BuscarUsuario": "Search",
+    "UserLdap:NoExiste": "Usuario no existe",
+    "UserLdap:IngreseUsuario": "Enter user",
+    //Acceso
+    "Acceso:VerificarUsuario": "Next",
+    "Acceso:UsuarioInvalido": "Invalid User Name",
+    "Acceso:NotificarFallido": "Notificación Accesos Fallidos",
+    "Acceso:NotificarFallido:Descripcion": "Realizar notificación, si existe un evento de accesos Fallidos",
+    "Acceso:TipoAccion:LoginFailed": "Acceso Fallido",
+    "Acceso:TipoAccion:LoginInvalidUserName": "Invalido usuario",
+    "Acceso:TipoAccion:LoginInvalidUserNameOrPassword": "Invalido usuario o contraseña",
+    "Acceso:TipoAccion:LoginLockedout": "Inicio de sesión bloqueado",
+    "Acceso:TipoAccion:LoginNotAllowed": "Inicio de sesión no permitido",
+    "Usuario": "User Name",
+    //Cuenta
+    "Cuenta:ReseteoClaveNoPermitido": "User with email address: {0}, password recovery is not allowed",
+    "Cuenta:PasswordReset": "Password reset",
+    //Pagina Contactenos
+    "Contactenos:Titulo": "Contáctenos",
+    "Contactenos:Contenido": "... ",
+    //Pagina Contactenos
+    "PreguntasFrecuentes:Titulo": "Preguntas frecuentes",
+    "PreguntasFrecuentes:Contenido": "... ",
+
+    //BusinessException
+    //03 => Identidad
+    "Base:030001": "La contraseña, no pueder ser igual a las {0} contraseñas registradas anteriormente"
+
+  }
+}

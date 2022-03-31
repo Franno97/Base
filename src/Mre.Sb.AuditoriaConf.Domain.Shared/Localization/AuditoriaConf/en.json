@@ -1,0 +1,27 @@
+{
+  "culture": "en",
+  "texts": {
+    //Generales
+    "Titulo:Validacion": "Validación",
+    "Buscando": "Buscando...",
+    "BuscandoError": "Error en busqueda",
+    //Entidades
+    "Auditable:Item": "Item Auditable",
+    "Auditable:Categoria": "Categoría",
+    "Auditable:PlaceholderBuscar": "Buscar...",
+    "TodasCategorias": "Todas las Categorías",
+    "Auditar:Item": "Item Auditable",
+    "Auditar:Categoria": "Categoría",
+    "Auditar:AccionesVacia": "Se debe seleccionar una acción mínimo",
+    //Menus
+    "Menu:Auditable": "Ítems Auditables",
+    "Menu:Auditar": "Configuración de auditoria",
+    //Permission
+    "Permission:AuditoriaConfManagement": "Configuración de auditoria",
+    "Permission:Change": "Cambiar",
+    "Permission:Delete": "Eliminación",
+    "Permission:AuditarManagement": "Configuración de auditoria",
+    "Permission:AuditableManagement": "Ítems Auditables"
+
+  }
+}

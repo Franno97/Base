@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  mre.sb.base.identityserver:
+    image: ${DOCKER_REGISTRY-}mresbbaseidentityserver
+    build:
+      context: .
+      dockerfile: src/Mre.Sb.Base.IdentityServer/Dockerfile
+  
+  mre.sb.base.httpapi.host:
+    image: ${DOCKER_REGISTRY-}mresbbasehttpapihost
+    build:
+      context: .
+      dockerfile: src/Mre.Sb.Base.HttpApi.Host/Dockerfile
+  

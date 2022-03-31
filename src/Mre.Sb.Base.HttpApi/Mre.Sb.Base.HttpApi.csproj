@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Mre.Sb.Base</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mre.Sb.Base.Application.Contracts\Mre.Sb.Base.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Mre.Sb.Ldap.Application.Contracts\Mre.Sb.Ldap.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Mre.Sb.Notification.HttpApi.Client\Mre.Sb.Notification.HttpApi.Client.csproj" />
+	  <ProjectReference Include="..\Volo.Abp.Identity.HttpApi\Volo.Abp.Identity.HttpApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    
+	<ProjectReference Include="..\Volo.Abp.Account.HttpApi\Volo.Abp.Account.HttpApi.csproj" />
+	
+    
+    <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi" Version="4.4.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="nswag\" />
+  </ItemGroup>
+
+</Project>

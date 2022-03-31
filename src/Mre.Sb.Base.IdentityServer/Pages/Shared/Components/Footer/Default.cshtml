@@ -1,0 +1,21 @@
+﻿@using Mre.Sb.Base.Pages.Shared.Components.Pie
+
+@model PieModelView
+
+<footer>
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <img title="Ministerio de Relaciones Exteriores y Movilidad Humana" alt="Ministerio de Relaciones Exteriores y Movilidad Humana" src="~/assets/img/footer-title.png" longdesc="longdesc/logdesc.html">
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-12 text">
+
+                    @Html.Raw(Model.InstitucionDireccion) 
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>

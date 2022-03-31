@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Mre.Sb.Base</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mre.Sb.Base.Domain\Mre.Sb.Base.Domain.csproj" />
+    <ProjectReference Include="..\Mre.Sb.Base.Application.Contracts\Mre.Sb.Base.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Mre.Sb.Ldap.Application.Contracts\Mre.Sb.Ldap.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Mre.Sb.Notification.HttpApi.Client\Mre.Sb.Notification.HttpApi.Client.csproj" />
+	  <ProjectReference Include="..\Volo.Abp.Identity.Application\Volo.Abp.Identity.Application.csproj" />
+
+	  <ProjectReference Include="..\Volo.Abp.Account.Application\Volo.Abp.Account.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup> 
+   
+    <PackageReference Include="Mre.Sb.Auditar.Contracts" Version="0.2.5" /> 
+   
+    <PackageReference Include="Volo.Abp.IdentityModel" Version="4.4.3" /> 
+   
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="4.4.3" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="4.4.3" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,38 @@
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+WORKDIR /src
+COPY ["NuGet.Config", "."]
+COPY ["src/Mre.Sb.Base.IdentityServer/Mre.Sb.Base.IdentityServer.csproj", "src/Mre.Sb.Base.IdentityServer/"]
+COPY ["src/Mre.Sb.Base.EntityFrameworkCore/Mre.Sb.Base.EntityFrameworkCore.csproj", "src/Mre.Sb.Base.EntityFrameworkCore/"]
+COPY ["src/Mre.Sb.Base.Domain/Mre.Sb.Base.Domain.csproj", "src/Mre.Sb.Base.Domain/"]
+COPY ["src/Mre.Sb.Base.Domain.Shared/Mre.Sb.Base.Domain.Shared.csproj", "src/Mre.Sb.Base.Domain.Shared/"]
+COPY ["src/Volo.Abp.Identity.Domain.Shared/Volo.Abp.Identity.Domain.Shared.csproj", "src/Volo.Abp.Identity.Domain.Shared/"]
+COPY ["src/Volo.Abp.Identity.Domain/Volo.Abp.Identity.Domain.csproj", "src/Volo.Abp.Identity.Domain/"]
+COPY ["src/Volo.Abp.Identity.EntityFrameworkCore/Volo.Abp.Identity.EntityFrameworkCore.csproj", "src/Volo.Abp.Identity.EntityFrameworkCore/"]
+COPY ["src/Volo.Abp.Account.Application/Volo.Abp.Account.Application.csproj", "src/Volo.Abp.Account.Application/"]
+COPY ["src/Volo.Abp.Account.Application.Contracts/Volo.Abp.Account.Application.Contracts.csproj", "src/Volo.Abp.Account.Application.Contracts/"]
+COPY ["src/Volo.Abp.Identity.Application.Contracts/Volo.Abp.Identity.Application.Contracts.csproj", "src/Volo.Abp.Identity.Application.Contracts/"]
+COPY ["src/Volo.Abp.Identity.Application/Volo.Abp.Identity.Application.csproj", "src/Volo.Abp.Identity.Application/"]
+COPY ["src/Volo.Abp.Account.Web.IdentityServer/Volo.Abp.Account.Web.IdentityServer.csproj", "src/Volo.Abp.Account.Web.IdentityServer/"]
+COPY ["src/Volo.Abp.Account.Web/Volo.Abp.Account.Web.csproj", "src/Volo.Abp.Account.Web/"]
+COPY ["src/Volo.Abp.Identity.AspNetCore/Volo.Abp.Identity.AspNetCore.csproj", "src/Volo.Abp.Identity.AspNetCore/"]
+COPY ["src/Volo.Abp.Account.HttpApi/Volo.Abp.Account.HttpApi.csproj", "src/Volo.Abp.Account.HttpApi/"]
+COPY ["src/Volo.Abp.Identity.HttpApi/Volo.Abp.Identity.HttpApi.csproj", "src/Volo.Abp.Identity.HttpApi/"]
+RUN dotnet restore "src/Mre.Sb.Base.IdentityServer/Mre.Sb.Base.IdentityServer.csproj"
+COPY . .
+WORKDIR "/src/src/Mre.Sb.Base.IdentityServer"
+RUN dotnet build "Mre.Sb.Base.IdentityServer.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "Mre.Sb.Base.IdentityServer.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "Mre.Sb.Base.IdentityServer.dll"]

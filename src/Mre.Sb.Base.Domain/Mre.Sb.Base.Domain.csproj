@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Mre.Sb.Base</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mre.Sb.AuditoriaConf.Domain.Shared\Mre.Sb.AuditoriaConf.Domain.Shared.csproj" />
+    <ProjectReference Include="..\Mre.Sb.Base.Domain.Shared\Mre.Sb.Base.Domain.Shared.csproj" />
+    <ProjectReference Include="..\Volo.Abp.Identity.Domain\Volo.Abp.Identity.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mre.Sb.AdministrativeUnit.Domain.Shared" Version="0.3.3" />
+    <PackageReference Include="Mre.Sb.Appointment.Domain.Shared" Version="0.2.2" />
+    <PackageReference Include="Mre.Sb.PersonRegistration.Domain.Shared" Version="0.2.2" />
+    <PackageReference Include="Volo.Abp.Emailing" Version="4.4.3" />
+    
+    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Identity" Version="4.4.3" />
+    <PackageReference Include="Volo.Abp.IdentityServer.Domain" Version="4.4.3" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.IdentityServer" Version="4.4.3" />
+    
+    <PackageReference Include="Volo.Abp.TenantManagement.Domain" Version="4.4.3" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Domain" Version="4.4.3" />
+    <PackageReference Include="Volo.Abp.SettingManagement.Domain" Version="4.4.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Identity\" />
+  </ItemGroup>
+
+</Project>

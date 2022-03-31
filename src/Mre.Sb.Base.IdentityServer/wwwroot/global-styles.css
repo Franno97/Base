@@ -1,0 +1,311 @@
+﻿/* You can add global styles to this file, and also import other style files */
+
+@keyframes donut-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*Personalizacion. argon-design-system*/
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #525f7f;
+    text-align: left;
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #32325d;
+}
+
+
+
+.bg-light {
+    background-color: #ced4da !important;
+    //background-color: #fff !important;
+}
+
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0.0625rem solid rgba(0, 0, 0, 0.05);
+    border-radius: 0.25rem;
+}
+
+
+
+
+/* Logos */
+
+@font-face {
+    font-family: 'logo';
+    src: url('assets/fonts/logo.eot?6ld4ck');
+    src: url('assets/fonts/logo.eot?6ld4ck#iefix') format('embedded-opentype'), url('assets/fonts/logo.ttf?6ld4ck') format('truetype'), url('assets/fonts/logo.woff?6ld4ck') format('woff'), url('assets/fonts/logo.svg?6ld4ck#logo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'logo' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logo:before {
+    content: "\e900";
+    color: #fff;
+}
+
+/*Navegacion*/
+
+.navbar-dark {
+    padding-bottom: 0.25rem;
+}
+
+    .navbar-dark .navbar-brand {
+        font-size: 3.5em;
+        padding: 0;
+    }
+
+.navbar-nav {
+    font-size: 0.9rem;
+}
+
+.navbar-dark .navbar-brand em {
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    opacity: 0;
+    margin-top: 0;
+    margin-left: 0;
+    overflow: hidden;
+}
+
+
+
+.bg-dark {
+    background-color: #212529 !important;
+}
+
+.navbar-dark .navbar-text {
+    color: rgba(255, 255, 255, 1);
+}
+
+    .navbar-dark .navbar-text a {
+        color: rgba(255, 255, 255,1);
+    }
+
+        .navbar-dark .navbar-text a:hover,
+        .navbar-dark .navbar-text a:focus {
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: #0eb3e0;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+
+.bg-dark {
+    background-image: url(assets/img/cabecera_fondo.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: stretch;
+}
+
+
+.navbar-top .container {
+    align-items: flex-end;
+}
+
+.navbar-top .site-name {
+    color: #fff;
+    margin-bottom: 0.5rem !important
+}
+
+
+.navbar-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.navbar-collapse {
+    //margin-top: 4.5rem
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        margin-top: 0rem
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0.75rem;
+        padding-left: 0.75rem;
+    }
+}
+
+
+
+/*Pie
+*/
+
+footer {
+    border-top: 1px solid white;
+    margin-top: 4rem;
+}
+
+    footer .container-fluid, footer .container {
+        background-image: url(assets/img/footer-line.png);
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 100% 5px;
+    }
+
+    footer .content [class*="col-"]:first-child {
+        text-align: left;
+    }
+
+    footer .content [class*="col-"]:last-child {
+        text-align: right;
+    }
+
+    footer .content {
+        font-size: 12px;
+    }
+
+    footer .content {
+        padding: 0.8em 0;
+    }
+
+    footer h1 {
+        display: block;
+        width: 1px;
+        height: 1px;
+        position: absolute;
+        margin: 0;
+        opacity: 0;
+        line-height: 0;
+    }
+
+/*
+* Formaularios
+*/
+
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+
+.form-control {
+    font-size: 0.875rem;
+    transition: all 0.15s ease;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 1.25rem + 2px);
+    padding: 0.625rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #8898aa;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #cad1d7;
+    border-radius: 0.25rem;
+    box-shadow: none;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control-sm {
+    height: calc(1.5em + 0.5rem + 2px);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+
+.form-control-lg {
+    height: calc(1.5em + 1.75rem + 2px);
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+}
+
+
+label {
+    font-size: 0.875rem;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+
+.btn-primary {
+    background-color: #3466D6;
+    border-color: #3466D6;
+}
+
+
+    .btn-primary.disabled, .btn-primary:disabled {
+        background-color: #3466D6;
+        border-color: #3466D6;
+    }
